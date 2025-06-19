@@ -11,6 +11,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const port =8080;
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
@@ -77,17 +78,6 @@ app.use((req,res,next)=>{
     next();
 });
 
-// app.get("/demouser",async(req,res)=>{
-//     let fakeUser = new User({
-//         email:"student@gmail.com",
-//         username:"delta-student"
-//     });
-
-//    let u1 = await User.register(fakeUser,"helloworld");
-//    res.send(u1);
-
-// });
-
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
@@ -101,6 +91,7 @@ app.use("/",userRouter);
 //     res.status(statuscode).render("error.ejs");
 // });
 
-app.listen(8080,()=>{
-    console.log(`server was working on 8080 port`);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/listings`)
+
 });

@@ -1,8 +1,22 @@
 <% layout("/layouts/boilerplate") %>
 <body>
+    <style>
+    .Box {
+      margin-top: 5px;
+      background: rgba(244, 243, 243, 0.951);
+      padding: 1rem;
+      border-radius: 20px;
+      width: 500px;
+      height: 300px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
    <div class="row mt-3">
-    <h2 class="col-6 offset-3">Login</h2>
-        <div class="col-6 offset-3">
+    <!-- <h2 class="col-6 offset-3">Login</h2> -->
+        <div class="col-6 offset-3 Box">
+            <h2>Login</h2>
             <form action="/login" method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -24,7 +38,7 @@
                         required
                     />
                 </div>
-                <button class="btn btn-success">Login</button>
+                <button class="btn btn-success" style="margin-bottom: 10px;">Login</button>
             </form>
         </div>
     </div>  
