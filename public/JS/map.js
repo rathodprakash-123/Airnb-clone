@@ -1,6 +1,5 @@
 
 	mapboxgl.accessToken = mapToken;
-	// mapboxgl.accessToken = 'pk.eyJ1IjoicHJha2FzaC0yMjAyODAxMDcxMjMiLCJhIjoiY21jMDdzNnllMGVrbTJsc2ZlMTA1cHM2MCJ9.qj8OUouonmMWFJyFAbfQEw';
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         center: listing.geometry.coordinates, // starting position [lng, lat]. Note that lat must be set between -90 and 90
