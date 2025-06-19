@@ -110,6 +110,6 @@ app.use("/",userRouter);
 //     res.status(statuscode).render("error.ejs");
 // });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
