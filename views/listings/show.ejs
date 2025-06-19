@@ -94,8 +94,9 @@
           <div class="caed-body">
             <h6 class="card-title" style="margin-top: 5px;">@<%= review.author.username %></h6>
             <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
-            <p class="card-text"><%= review.comment %></p>
+            <p class="card-text mb-3"><%= review.comment %></p>
           </div>
+          <% if(currentUser && currentUser._id.equals(review.author._id)){ %>
           <form
             class="mb-3"
             action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
@@ -103,6 +104,7 @@
           >
             <button class="btn btn-sm btn-dark" style="margin-top: 5px;">Delete</button>
           </form>
+          <% } %>
         </div>
         <% } %>
       </div>

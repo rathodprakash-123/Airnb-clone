@@ -59,8 +59,15 @@ const sessionOptions = {
     },
 };
 async function main() {
-    await mongoose.connect(db_Url);
+    try {
+        await mongoose.connect(db_Url);
+        console.log("✅ MongoDB connected");
+    } catch (err) {
+        console.error("❌ MongoDB connection error:", err);
+    }
 }
+
+main(); 
 app.use(session(sessionOptions));
 app.use(flash());
 
