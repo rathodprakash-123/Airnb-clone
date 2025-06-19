@@ -11,7 +11,8 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-const port = process.env.PORT || 8080 
+const port = 8080
+
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
@@ -109,6 +110,6 @@ app.use("/",userRouter);
 //     res.status(statuscode).render("error.ejs");
 // });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
