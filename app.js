@@ -11,12 +11,7 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-<<<<<<< HEAD
 const port =8080;
-=======
-const port = 8080
-
->>>>>>> 1b68f734651949c53d3ca7ea5d60ab36ef227768
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
@@ -90,14 +85,10 @@ app.use((req,res,next)=>{
     next();
 });
 
-<<<<<<< HEAD
-=======
 app.get("/",(req,res)=>{
     res.redirect("/listings");
 });
     
-
->>>>>>> 1b68f734651949c53d3ca7ea5d60ab36ef227768
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
@@ -112,11 +103,5 @@ app.use("/",userRouter);
 // });
 
 app.listen(port, () => {
-<<<<<<< HEAD
-  console.log(`Server running at http://localhost:${port}/listings`)
-
-});
-=======
   console.log(`Server running at http://localhost:${port}/listings`);
 });
->>>>>>> 1b68f734651949c53d3ca7ea5d60ab36ef227768
