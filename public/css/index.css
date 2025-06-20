@@ -1,0 +1,71 @@
+
+    #filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .filter {
+      text-align: center;
+      margin-right: 1rem;
+      margin-top: 2rem;
+      opacity: 1;
+    }
+    .filter p {
+      font-size: 0.8rem;
+    }
+    .filter:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    .tax-info {
+      display: none;
+    }
+    .tax-toggle {
+        border: 1px solid rgb(59, 58, 58);
+        border-radius: 1rem;
+        height: 3rem;
+        padding: 10px;
+        margin-left: 1rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        }
+    .hidden {
+      display: none;
+    }
+@media (max-width: 768px) {
+  .filter {
+    width: 100%;
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  #filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hide all filters on small screens by default */
+  .filter {
+    display: none;
+  }
+
+  /* Show filters when not hidden */
+  .filter:not(.hidden) {
+    display: flex;
+  }
+  .tax-toggle {
+    width: auto;
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+}
+
+/* Optional: Rotate the chevron on toggle */
+.rotated {
+  transform: rotate(90deg);
+  /* text-align: ; */
+  transition: transform 0.3s ease;
+}
